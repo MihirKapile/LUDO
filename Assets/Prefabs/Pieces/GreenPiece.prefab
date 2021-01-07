@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7137046085783944677}
   - component: {fileID: 1851107521518992149}
+  - component: {fileID: -2476948136562541594}
+  - component: {fileID: 5325692515238468708}
   m_Layer: 0
   m_Name: GreenPiece
-  m_TagString: Untagged
+  m_TagString: green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7827459532952631785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.59, y: -1.54, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 0.72219}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.72219}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 516004276ed19624fae634ac7b23e0e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 993033b7055c8214397bb49a3fa5af16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,3 +84,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2476948136562541594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827459532952631785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72be2810e6a23d743bfd408c1ed8b351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: {fileID: 0}
+  canMove: 0
+  atHome: 0
+  canBeSelected: 0
+  gm: {fileID: 0}
+  greenIndex: 
+  currentPos: 0
+--- !u!70 &5325692515238468708
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827459532952631785}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3.5499997, y: 4.3299994}
+  m_Direction: 0
