@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2201892485835865896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.09, y: -1.7, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.72219}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,10 +98,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: {fileID: 0}
   canMove: 0
-  atHome: 0
+  isReady: 0
   canBeSelected: 0
-  dr: {fileID: 0}
-  gm: {fileID: 0}
+  isAlone: 0
+  prev_point: {fileID: 0}
+  curr_point: {fileID: 0}
+  lb: {fileID: 0}
   yellowIndex: 
   currentPos: 0
 --- !u!70 &6641478707745320895

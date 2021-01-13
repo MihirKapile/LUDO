@@ -16,12 +16,31 @@ MonoBehaviour:
     m_Keys:
     - Assets/Materials/purple grad.jpg
     - Assets/Materials/purple grad.jpg.meta
+    - Assets/Prefabs/DiceRoll.prefab
+    - Assets/Prefabs/DiceRoll.prefab.meta
+    - Assets/Prefabs/PathObject.prefab
+    - Assets/Prefabs/Pieces/BluePiece.prefab
+    - Assets/Prefabs/Pieces/GreenPiece.prefab
+    - Assets/Prefabs/Pieces/RedPiece.prefab
+    - Assets/Prefabs/Pieces/YellowPiece.prefab
     - Assets/Scenes/GameScene.unity
+    - Assets/Scripts/DiceRoll.cs
+    - Assets/Scripts/Home/BlueHome.cs
+    - Assets/Scripts/Home/GreenHome.cs
     - Assets/Scripts/Home/PlayerHome.cs
+    - Assets/Scripts/Home/RedHome.cs
+    - Assets/Scripts/Home/YellowHome.cs
     - Assets/Scripts/LudoBoard.cs
+    - Assets/Scripts/Movement/BlueMovement.cs
+    - Assets/Scripts/Movement/GreenMovement.cs
     - Assets/Scripts/Movement/PlayerMovement.cs
+    - Assets/Scripts/Movement/RedMovement.cs
+    - Assets/Scripts/Movement/YellowMovement.cs
+    - Assets/Scripts/Path.cs
+    - Assets/Scripts/Path.cs.meta
+    - Assets/Scripts/PathObjects.cs
     - 
-    m_Values: 00000000000000
+    m_Values: 0000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

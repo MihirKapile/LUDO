@@ -11,7 +11,7 @@ public class DiceRoll : MonoBehaviour
     [SerializeField] PathObjects Path;
     public int pos;
 
-    bool canDiceRoll=true;
+    public bool canDiceRoll=true;
 
     Coroutine transition_Co;
     private void Awake()
@@ -25,18 +25,23 @@ public class DiceRoll : MonoBehaviour
         numberGotFace.gameObject.SetActive(true);
         Anim.SetActive(false);
     }
-    public int CheckPosition()
+
+    private void Update()
     {
-        int i;
-        for(i = 0; i < 4; i++)
-        {
-            if(Path.dicePath[i].transform.position == transform.position)
-            {
-                break;
-            }
-        }
-        return i;
+        canDiceRoll = LudoBoard.lb.diceRoll;
     }
+    //public int CheckPosition()
+    //{
+    //    int i;
+    //    for(i = 0; i < 4; i++)
+    //    {
+    //        if(Path.dicePath[i].transform.position == transform.position)
+    //        {
+    //            break;
+    //        }
+    //    }
+    //    return i;
+    //}
     private void OnMouseDown()
     {
         transition_Co = StartCoroutine(TransitionEnum());
@@ -52,8 +57,12 @@ public class DiceRoll : MonoBehaviour
             Anim.SetActive(true);
 
             yield return new WaitForSeconds(0.6f);
-            lb.numberGot = Random.Range(0, 6);
-            numberGotFace.sprite = numberFaces[lb.numberGot];
+
+            LudoBoard.lb.numberGot = Random.Range(4, 6); //(0,6)
+            LudoBoard.lb.dr = this;
+
+            numberGotFace.sprite = numberFaces[LudoBoard.lb.numberGot];
+            LudoBoard.lb.numberGot++;
             numberGotFace.gameObject.SetActive(true);
             Anim.SetActive(false);
             yield return new WaitForEndOfFrame();

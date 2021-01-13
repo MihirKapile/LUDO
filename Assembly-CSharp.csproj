@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\PathObjects.cs" />
     <Compile Include="Assets\Scripts\Home\GreenHome.cs" />
     <Compile Include="Assets\Scripts\Home\BlueHome.cs" />
+    <Compile Include="Assets\Scripts\LudoBoard.cs" />
     <Compile Include="Assets\Scripts\Movement\RedMovement.cs" />
     <Compile Include="Assets\Scripts\DiceRoll.cs" />
     <Compile Include="Assets\Scripts\Movement\BlueMovement.cs" />
@@ -69,7 +70,7 @@
     <Compile Include="Assets\Scripts\Home\YellowHome.cs" />
     <Compile Include="Assets\Scripts\Home\RedHome.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\LudoBoard.cs" />
+    <Compile Include="Assets\Scripts\Path.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

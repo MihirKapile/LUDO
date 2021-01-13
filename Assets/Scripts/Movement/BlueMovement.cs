@@ -6,38 +6,91 @@ public class BlueMovement : PlayerMovement
 {
 
     public int[] blueIndex;
-    public int currentPos = 0;
+    public int currentPos;
+    public DiceRoll blueDice;
     private void Start()
     {
+        blueDice = GetComponentInParent<BlueHome>().dr;
+        //playerSpecificHome = GetComponentInParent<BlueHome>().Home[];
         blueIndex = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 52, 53, 54, 55, 56, 57 };
-
+        currentPos = 0;
     }
+
     private void Update()
     {
-        SelectingPiece();
-        Selection();
+        if (LudoBoard.lb.dr != null && LudoBoard.lb.dr == blueDice)
+        {
+            if (isPathPointAVailableToMove(LudoBoard.lb.numberGot, currentPos, blueIndex))
+            {
+                if (LudoBoard.lb.numberGot == 6)
+                {
+                    GetComponentInParent<BlueHome>().selectAll();
+                }
+                else
+                {
+                    //GetComponentInParent<BlueHome>().deselectAll();
+                    GetComponentInParent<BlueHome>().selectOnlyOustide();
+                }
+            }
+            else if (!isPathPointAVailableToMove(LudoBoard.lb.numberGot, currentPos, blueIndex))
+            {
+                canBeSelected = false;
+            }
+
+            if (LudoBoard.lb.numberGot == 0)
+            {
+                GetComponentInParent<BlueHome>().deselectAll();
+            }
+            //blueDice.canDiceRoll = isMoveDone;
+        }
+        else
+        {
+            GetComponentInParent<BlueHome>().deselectAll();
+
+        }
+        SelectionAnimation();
+
+
+        if (toDestroy)
+        {
+            DestroyPiece(blueIndex,currentPos);
+            currentPos = 0;
+        }
     }
+
     private void OnMouseDown()
     {
-        //whenGotSix();
-        if (atHome)
+        if (LudoBoard.lb.dr != null && LudoBoard.lb.dr == blueDice)
         {
-            canBeSelected = false;
+            if (LudoBoard.lb.dr && canBeSelected)
+            {
+                if (!isReady)
+                {
+                    if (LudoBoard.lb.numberGot == 6)
+                    {
+                        LeavingHome(blueIndex);
+                        currentPos = 1;
+                        LudoBoard.lb.numberGot = 0;
+                        return;
+                    }
+                }
+
+                if (isReady)
+                {
+                    GetComponentInParent<BlueHome>().deselectAll();
+                    canMove = true;
+
+                    //blueDice.canDiceRoll = isMoveDone;
+
+                }
+                int r = LudoBoard.lb.numberGot;
+                MovePiece(blueIndex, currentPos, r);
+                currentPos += r;
+                LudoBoard.lb.numberGot = 0;
+            }
         }
 
-        if (canBeSelected)
-        {
-            atHome = false;
-        }
-
-
-        if (!atHome)
-        {
-            int r = lb.numberGot+1;
-            StartCoroutine(MovePiece(blueIndex, currentPos, r));
-            currentPos += r;
-        }
- 
     }
+
 
 }

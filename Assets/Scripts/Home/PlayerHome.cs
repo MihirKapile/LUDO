@@ -4,6 +4,7 @@ public class PlayerHome : MonoBehaviour
 {
     public Transform[] Home;
     public GameObject piece;
+    public DiceRoll dr;
 
     public void Awake()
     {
@@ -13,7 +14,10 @@ public class PlayerHome : MonoBehaviour
             GameObject dot_c = Instantiate(piece, tempPos, Quaternion.identity);
             dot_c.transform.parent = this.transform;
             dot_c.name = i.ToString();
+            dot_c.GetComponent<PlayerMovement>().playerSpecificHome = Home[i];
         }
     }
+
+
 
 }

@@ -4,30 +4,35 @@ using UnityEngine;
 public class LudoBoard : MonoBehaviour
 {
     public int numberGot;
-    public string[] tags = { "blue", "yellow", "green", "red" };
+    public bool diceRoll;
+    public string[] tags = { "blue", "red"  , "green", "yellow" };
     public int NumberOfPlayers;
-    // 0 B, 1 Y , 2 G ,3 R
-    private void Start()
+    public int whoseChance = 0;
+    public DiceRoll dr;
+    public PlayerHome[] AllLudoHomes;
+    // 0 B, 1 R, 2 G ,3 Y 
+
+    public static LudoBoard lb;
+    private void Awake()
     {
-        StartCoroutine(SequenceEnum());
+        lb = this;
+        diceRoll = true;
+        NumberOfPlayers = 4;
     }
 
-    public IEnumerator SequenceEnum()
+    int i = 0;
+    private void Update()
     {
-        /*DiceRolll
-         * get the number face
-         * Check pos of piece
-         *   for each piece
-         *      if(dice==6){ Selection all}
-         *      if(not){select only not at home}
-         *      if all pieace atHome = move to next player
-         *  Now after selection
-         *      if(piece athome, move to index one)
-         *      if(piece was elswhere, move steps with number)
-         *  After movement
-         *      if(dice==6) {repeat above}
-         *      else{move to next player}
-        */
-        yield return new WaitForSeconds(1f);
+        whoseChance = whoseChance / NumberOfPlayers;
+        whoseChance++;
     }
+
+    public void Chance()
+    {
+        if (diceRoll)
+        {
+
+        }
+    }
+
 }
