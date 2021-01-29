@@ -25,11 +25,17 @@ public class BlueMovement : PlayerMovement
                 if (LudoBoard.lb.numberGot == 6)
                 {
                     GetComponentInParent<BlueHome>().selectAll();
+                    LudoBoard.lb.diceRoll = false;
+                    StartCoroutine(LudoBoard.lb.OneMoreChance_enum());
                 }
                 else
                 {
-                    //GetComponentInParent<BlueHome>().deselectAll();
                     GetComponentInParent<BlueHome>().selectOnlyOustide();
+                    if (GetComponentInParent<BlueHome>().checkAllatHome())
+                    {
+                        StartCoroutine(LudoBoard.lb.nextChance_enum());
+
+                    }
                 }
             }
             else if (!isPathPointAVailableToMove(LudoBoard.lb.numberGot, currentPos, blueIndex))

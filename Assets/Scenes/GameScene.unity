@@ -1751,8 +1751,13 @@ MonoBehaviour:
   - {fileID: 2009099927}
   - {fileID: 1167316230}
   - {fileID: 1823791558}
-  piece: {fileID: 2201892485835865896, guid: 4139dff5fb2354f4fb4a9270aad5b034, type: 3}
+  prefab_piece: {fileID: 2201892485835865896, guid: 4139dff5fb2354f4fb4a9270aad5b034, type: 3}
   dr: {fileID: 572172307}
+  childPieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &454920791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3801,8 +3806,13 @@ MonoBehaviour:
   - {fileID: 785373909}
   - {fileID: 1349305774}
   - {fileID: 1226633718}
-  piece: {fileID: 7827459532952631785, guid: b7886f8e6daae814b91cf0face488188, type: 3}
+  prefab_piece: {fileID: 7827459532952631785, guid: b7886f8e6daae814b91cf0face488188, type: 3}
   dr: {fileID: 1441779048}
+  childPieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &900126163 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 822179862386645370, guid: ce2bd478a811506469bae7cd38c6f31a, type: 3}
@@ -5350,6 +5360,7 @@ MonoBehaviour:
   - green
   - red
   NumberOfPlayers: 0
+  CurrentHomes: []
   whoseChance: 0
   dr: {fileID: 0}
   AllLudoHomes:
@@ -6168,8 +6179,13 @@ MonoBehaviour:
   - {fileID: 939390339}
   - {fileID: 752631314}
   - {fileID: 1157510562}
-  piece: {fileID: 2800195811154332763, guid: e165ac8ff06b3ed4689a96427fdd75a7, type: 3}
+  prefab_piece: {fileID: 2800195811154332763, guid: e165ac8ff06b3ed4689a96427fdd75a7, type: 3}
   dr: {fileID: 234373399}
+  childPieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1466146379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7797,8 +7813,13 @@ MonoBehaviour:
   - {fileID: 169005633}
   - {fileID: 1466146380}
   - {fileID: 538892910}
-  piece: {fileID: 3323164710876341502, guid: 9c1215673871b0546b9ca84bb04e1d73, type: 3}
+  prefab_piece: {fileID: 3323164710876341502, guid: 9c1215673871b0546b9ca84bb04e1d73, type: 3}
   dr: {fileID: 2049735123}
+  childPieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1933215686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8852,6 +8873,10 @@ PrefabInstance:
     - target: {fileID: 7532021640608004639, guid: a154e3821da935f44a44988e1e319bba, type: 3}
       propertyPath: m_Name
       value: DiceRoll_blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7532021640608004639, guid: a154e3821da935f44a44988e1e319bba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a154e3821da935f44a44988e1e319bba, type: 3}

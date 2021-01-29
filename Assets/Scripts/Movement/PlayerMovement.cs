@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public Path curr_point;
     public Transform playerSpecificHome;
     [HideInInspector]
-    public LudoBoard lb;
 
     Coroutine move_co;
     Coroutine destroy_co;
@@ -24,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     {
         isAlone = true;
         Path = FindObjectOfType<PathObjects>();
-        lb = FindObjectOfType<LudoBoard>();
         //playerSpecificHome = this.transform;
         //isMoveDone = true;
         //dr = FindObjectOfType<DiceRoll>();
@@ -35,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
     {
         isReady = true;
         this.transform.position = Path.outerPaths[pieceIndex[0]].transform.position;
-        //isMoveDone = true;
+        StartCoroutine(LudoBoard.lb.OneMoreChance_enum());
+        LudoBoard.lb.diceRoll = true;
         prev_point = Path.outerPaths[pieceIndex[0]].GetComponent<Path>();
         curr_point = Path.outerPaths[pieceIndex[0]].GetComponent<Path>();
         curr_point.AddPlayer(this);
@@ -66,6 +65,15 @@ public class PlayerMovement : MonoBehaviour
                 if (i == currentPos + moves - 1)
                 {
                     LudoBoard.lb.diceRoll = true;
+                    if (moves == 6)
+                    {
+                        StartCoroutine(LudoBoard.lb.OneMoreChance_enum());
+
+                    }
+                    else
+                    {
+                        StartCoroutine(LudoBoard.lb.nextChance_enum());
+                    }
                     this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
                     curr_point = Path.outerPaths[pieceIndex[i]].GetComponent<Path>();

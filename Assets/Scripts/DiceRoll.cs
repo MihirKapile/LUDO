@@ -29,22 +29,16 @@ public class DiceRoll : MonoBehaviour
     private void Update()
     {
         canDiceRoll = LudoBoard.lb.diceRoll;
+        if (this != LudoBoard.lb.dr)
+        {
+            numberGotFace.sprite = initialDice;
+        }
     }
-    //public int CheckPosition()
-    //{
-    //    int i;
-    //    for(i = 0; i < 4; i++)
-    //    {
-    //        if(Path.dicePath[i].transform.position == transform.position)
-    //        {
-    //            break;
-    //        }
-    //    }
-    //    return i;
-    //}
+    
     private void OnMouseDown()
     {
         transition_Co = StartCoroutine(TransitionEnum());
+        
     }
 
     IEnumerator TransitionEnum()
