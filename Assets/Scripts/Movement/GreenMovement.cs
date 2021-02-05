@@ -22,11 +22,18 @@ public class GreenMovement : PlayerMovement
                 if (LudoBoard.lb.numberGot == 6)
                 {
                     GetComponentInParent<GreenHome>().selectAll();
+                    LudoBoard.lb.diceRoll = false;
+                    StartCoroutine(LudoBoard.lb.OneMoreChance_enum());
                 }
                 else
                 {
                     //GetComponentInParent<GreenHome>().deselectAll();
                     GetComponentInParent<GreenHome>().selectOnlyOustide();
+                    if (GetComponentInParent<GreenHome>().checkAllatHome())
+                    {
+                        StartCoroutine(LudoBoard.lb.nextChance_enum());
+
+                    }
                 }
             }
             else if (!isPathPointAVailableToMove(LudoBoard.lb.numberGot, currentPos, greenIndex))
@@ -66,6 +73,7 @@ public class GreenMovement : PlayerMovement
                     if (LudoBoard.lb.numberGot == 6)
                     {
                         LeavingHome(greenIndex);
+                        currentPos = 1;
                         LudoBoard.lb.numberGot = 0;
                         return;
                     }

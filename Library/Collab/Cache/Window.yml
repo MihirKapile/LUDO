@@ -14,33 +14,158 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - .collabignore
+    - Assets/Animation.meta
+    - Assets/Animation/DiceRoll.controller
+    - Assets/Animation/DiceRoll.controller.meta
+    - Assets/Animation/DiceRolling.anim
+    - Assets/Animation/DiceRolling.anim.meta
+    - Assets/Materials.meta
+    - Assets/Materials/2 Player Text.png
+    - Assets/Materials/2 Player Text.png.meta
+    - Assets/Materials/3 Player Text.png
+    - Assets/Materials/3 Player Text.png.meta
+    - Assets/Materials/4 player text.png
+    - Assets/Materials/4 player text.png.meta
+    - Assets/Materials/Are you Sure.png
+    - Assets/Materials/Are you Sure.png.meta
+    - Assets/Materials/BluePiece.png.meta
+    - Assets/Materials/Dice.meta
+    - Assets/Materials/Dice/01.png.meta
+    - Assets/Materials/Dice/02.png.meta
+    - Assets/Materials/Dice/03.png.meta
+    - Assets/Materials/Dice/04.png.meta
+    - Assets/Materials/Dice/05.png.meta
+    - Assets/Materials/Dice/06.png.meta
+    - Assets/Materials/Dice/07.png.meta
+    - Assets/Materials/Dice/08.png.meta
+    - Assets/Materials/Dice/09.png.meta
+    - Assets/Materials/Dice/10.png.meta
+    - Assets/Materials/Dice/11.png.meta
+    - Assets/Materials/Dice/12.png.meta
+    - Assets/Materials/Dice/13.png.meta
+    - Assets/Materials/Dice/14.png.meta
+    - Assets/Materials/Dice/15.png.meta
+    - Assets/Materials/Dice/16.png.meta
+    - Assets/Materials/Dice/17.png.meta
+    - Assets/Materials/Dice/18.png.meta
+    - Assets/Materials/Dice/19.png.meta
+    - Assets/Materials/Dice/20.png.meta
+    - Assets/Materials/Dice/21.png.meta
+    - Assets/Materials/Dice/22.png.meta
+    - Assets/Materials/Dice/23.png.meta
+    - Assets/Materials/Dice/24.png.meta
+    - Assets/Materials/Dice/25.png.meta
+    - Assets/Materials/Dice/26.png.meta
+    - Assets/Materials/Dice/27.png.meta
+    - Assets/Materials/Dice/28.png.meta
+    - Assets/Materials/Dice/29.png.meta
+    - Assets/Materials/Dice/30.png.meta
+    - Assets/Materials/Dice/31.png.meta
+    - Assets/Materials/Dice/32.png.meta
+    - Assets/Materials/Dice/CubeLogo.png.meta
+    - Assets/Materials/Dice/DiceWhiteBlack.blend.meta
+    - Assets/Materials/Dice/DiceWhiteBlack.blend1.meta
+    - Assets/Materials/Dice/DiceWhiteBlackAnimated.blend.meta
+    - Assets/Materials/Dice/Faces.meta
+    - Assets/Materials/Dice/Faces/diceFive.png.meta
+    - Assets/Materials/Dice/Faces/diceFour.png.meta
+    - Assets/Materials/Dice/Faces/diceOne.png.meta
+    - Assets/Materials/Dice/Faces/diceSix.png.meta
+    - Assets/Materials/Dice/Faces/diceThree.png.meta
+    - Assets/Materials/Dice/Faces/diceTwo.png.meta
+    - Assets/Materials/Dice/diceLayered.xcf.meta
+    - Assets/Materials/Dice/dice_260px_16.png.meta
+    - Assets/Materials/Dice/dice_96px_16.png.meta
+    - Assets/Materials/Exit.png
+    - Assets/Materials/Exit.png.meta
+    - Assets/Materials/GreenPiece.png.meta
+    - Assets/Materials/Ludo Text.png
+    - Assets/Materials/Ludo Text.png.meta
+    - Assets/Materials/Ludo texture.png
+    - Assets/Materials/Ludo texture.png.meta
+    - Assets/Materials/Ludo_board.png.meta
+    - Assets/Materials/No Button.png
+    - Assets/Materials/No Button.png.meta
+    - Assets/Materials/Players Four.png
+    - Assets/Materials/Players Four.png.meta
+    - Assets/Materials/Players three.png
+    - Assets/Materials/Players three.png.meta
+    - Assets/Materials/Quit.png
+    - Assets/Materials/Quit.png.meta
+    - Assets/Materials/RedPiece.png.meta
+    - Assets/Materials/RollSpace.png.meta
+    - Assets/Materials/YellowPiece.png.meta
+    - Assets/Materials/Yes Button.png
+    - Assets/Materials/Yes Button.png.meta
+    - Assets/Materials/dot.png.meta
+    - Assets/Materials/old-paper.jpg
+    - Assets/Materials/old-paper.jpg.meta
+    - Assets/Materials/players two.png
+    - Assets/Materials/players two.png.meta
     - Assets/Materials/purple grad.jpg
     - Assets/Materials/purple grad.jpg.meta
+    - Assets/Materials/wood.jpg
+    - Assets/Materials/wood.jpg.meta
+    - Assets/Prefabs.meta
     - Assets/Prefabs/DiceRoll.prefab
     - Assets/Prefabs/DiceRoll.prefab.meta
     - Assets/Prefabs/PathObject.prefab
+    - Assets/Prefabs/PathObject.prefab.meta
+    - Assets/Prefabs/Pieces.meta
     - Assets/Prefabs/Pieces/BluePiece.prefab
+    - Assets/Prefabs/Pieces/BluePiece.prefab.meta
     - Assets/Prefabs/Pieces/GreenPiece.prefab
+    - Assets/Prefabs/Pieces/GreenPiece.prefab.meta
     - Assets/Prefabs/Pieces/RedPiece.prefab
+    - Assets/Prefabs/Pieces/RedPiece.prefab.meta
     - Assets/Prefabs/Pieces/YellowPiece.prefab
+    - Assets/Prefabs/Pieces/YellowPiece.prefab.meta
+    - Assets/Scenes.meta
     - Assets/Scenes/GameScene.unity
+    - Assets/Scenes/Main.unity
+    - Assets/Scenes/Main.unity.meta
+    - Assets/Scripts.meta
     - Assets/Scripts/DiceRoll.cs
+    - Assets/Scripts/DiceRoll.cs.meta
+    - Assets/Scripts/GameManager.cs.meta
+    - Assets/Scripts/Home.meta
     - Assets/Scripts/Home/BlueHome.cs
+    - Assets/Scripts/Home/BlueHome.cs.meta
     - Assets/Scripts/Home/GreenHome.cs
+    - Assets/Scripts/Home/GreenHome.cs.meta
     - Assets/Scripts/Home/PlayerHome.cs
+    - Assets/Scripts/Home/PlayerHome.cs.meta
     - Assets/Scripts/Home/RedHome.cs
+    - Assets/Scripts/Home/RedHome.cs.meta
     - Assets/Scripts/Home/YellowHome.cs
+    - Assets/Scripts/Home/YellowHome.cs.meta
     - Assets/Scripts/LudoBoard.cs
+    - Assets/Scripts/LudoBoard.cs.meta
+    - Assets/Scripts/Movement.meta
     - Assets/Scripts/Movement/BlueMovement.cs
+    - Assets/Scripts/Movement/BlueMovement.cs.meta
     - Assets/Scripts/Movement/GreenMovement.cs
+    - Assets/Scripts/Movement/GreenMovement.cs.meta
     - Assets/Scripts/Movement/PlayerMovement.cs
+    - Assets/Scripts/Movement/PlayerMovement.cs.meta
     - Assets/Scripts/Movement/RedMovement.cs
+    - Assets/Scripts/Movement/RedMovement.cs.meta
     - Assets/Scripts/Movement/YellowMovement.cs
+    - Assets/Scripts/Movement/YellowMovement.cs.meta
     - Assets/Scripts/Path.cs
     - Assets/Scripts/Path.cs.meta
     - Assets/Scripts/PathObjects.cs
+    - Assets/Scripts/PathObjects.cs.meta
+    - Packages/manifest.json
+    - ProjectSettings/EditorBuildSettings.asset
+    - ProjectSettings/ProjectSettings.asset
+    - ProjectSettings/ProjectVersion.txt
+    - ProjectSettings/TagManager.asset
+    - ProjectSettings/UnityConnectSettings.asset
+    - ProjectSettings/VersionControlSettings.asset
     - 
-    m_Values: 0000000000000000000000000000000000000000000000000000
+    m_Values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

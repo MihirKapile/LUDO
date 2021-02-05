@@ -32,6 +32,7 @@ public class DiceRoll : MonoBehaviour
         if (this != LudoBoard.lb.dr)
         {
             numberGotFace.sprite = initialDice;
+            
         }
     }
     
@@ -52,7 +53,7 @@ public class DiceRoll : MonoBehaviour
 
             yield return new WaitForSeconds(0.6f);
 
-            LudoBoard.lb.numberGot = Random.Range(4, 6); //(0,6)
+            LudoBoard.lb.numberGot = Random.Range(0, 6); //(0,6)
             LudoBoard.lb.dr = this;
 
             numberGotFace.sprite = numberFaces[LudoBoard.lb.numberGot];

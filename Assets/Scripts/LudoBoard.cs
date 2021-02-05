@@ -21,7 +21,7 @@ public class LudoBoard : MonoBehaviour
         lb = this;
         diceRoll = true;
         //chanceDone = true;
-        NumberOfPlayers = 2;
+        //NumberOfPlayers = 4;
         SetPlayers(NumberOfPlayers);
         StartCoroutine(nextChance_enum());
     }

@@ -22,11 +22,18 @@ public class RedMovement : PlayerMovement
                 if (LudoBoard.lb.numberGot == 6)
                 {
                     GetComponentInParent<RedHome>().selectAll();
+                    LudoBoard.lb.diceRoll = false;
+                    StartCoroutine(LudoBoard.lb.OneMoreChance_enum());
                 }
                 else
                 {
                     //GetComponentInParent<RedHome>().deselectAll();
                     GetComponentInParent<RedHome>().selectOnlyOustide();
+                    if (GetComponentInParent<RedHome>().checkAllatHome())
+                    {
+                        StartCoroutine(LudoBoard.lb.nextChance_enum());
+
+                    }
                 }
             }
             else if (!isPathPointAVailableToMove(LudoBoard.lb.numberGot, currentPos, redIndex))
@@ -65,6 +72,7 @@ public class RedMovement : PlayerMovement
                     if (LudoBoard.lb.numberGot == 6)
                     {
                         LeavingHome(redIndex);
+                        currentPos = 1;
                         LudoBoard.lb.numberGot = 0;
                         return;
                     }
@@ -80,8 +88,8 @@ public class RedMovement : PlayerMovement
                 }
                 int r = LudoBoard.lb.numberGot;
                 MovePiece(redIndex, currentPos, r);
-                LudoBoard.lb.numberGot = 0;
                 currentPos += r;
+                LudoBoard.lb.numberGot = 0;
             }
         }
 

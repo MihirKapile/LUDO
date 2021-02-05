@@ -22,11 +22,18 @@ public class YellowMovement : PlayerMovement
                 if (LudoBoard.lb.numberGot == 6)
                 {
                     GetComponentInParent<YellowHome>().selectAll();
+                    LudoBoard.lb.diceRoll = false;
+                    StartCoroutine(LudoBoard.lb.OneMoreChance_enum());
                 }
                 else
                 {
                     //GetComponentInParent<yellowHome>().deselectAll();
                     GetComponentInParent<YellowHome>().selectOnlyOustide();
+                    if (GetComponentInParent<YellowHome>().checkAllatHome())
+                    {
+                        StartCoroutine(LudoBoard.lb.nextChance_enum());
+
+                    }
                 }
             }
             else if (!isPathPointAVailableToMove(LudoBoard.lb.numberGot, currentPos, yellowIndex))
@@ -67,6 +74,7 @@ public class YellowMovement : PlayerMovement
                     if (LudoBoard.lb.numberGot == 6)
                     {
                         LeavingHome(yellowIndex);
+                        currentPos = 1;
                         LudoBoard.lb.numberGot = 0;
                         return;
                     }
